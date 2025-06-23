@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlayerMarketZone - Game Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🎮 PlayerMarket</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#sell">Sell</a>
+      <a href="#support">Support</a>
+      <a href="#cart">🛒</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>The Ultimate Game Marketplace</h1>
+    <p>Buy. Sell. Trade. Securely & Instantly.</p>
+  </section>
+
+  <div class="search-bar">
+    <input id="gameInput" list="games" type="text" placeholder="Search games..." />
+    <div class="browse-button" onclick="toggleDropdown()" id="browseButton">Browse Games ▼</div>
+    <div class="dropdown" id="gameDropdown">
+      <a href="#">Currency</a>
+      <a href="#">Items / Skins</a>
+      <a href="#">Accounts</a>
+      <a href="#">Power Leveling</a>
+      <a href="#">View All Games</a>
+    </div>
+    <datalist id="games">
+      <option value="Fortnite" />
+      <option value="Valorant" />
+      <option value="League of Legends" />
+      <option value="PUBG" />
+    </datalist>
+  </div>
+
+  <section class="grid-section" id="categories">
+    <h2>Browse By Category</h2>
+    <div class="category-bar">
+      <button>All</button>
+      <button>Currency</button>
+      <button>Items / Skins</button>
+      <button>Accounts</button>
+      <button>Power Leveling</button>
+    </div>
+    <div class="game-grid">
+      <a href="/listings/fortnite.html" class="game-card">
+        <img src="https://img.icons8.com/color/96/fortnite.png" alt="Fortnite" />
+        <h3>Fortnite</h3>
+      </a>
+      <a href="/listings/valorant.html" class="game-card">
+        <img src="https://img.icons8.com/color/96/valorant.png" alt="Valorant" />
+        <h3>Valorant</h3>
+      </a>
+      <a href="/listings/lol.html" class="game-card">
+        <img src="https://img.icons8.com/color/96/league-of-legends.png" alt="LoL" />
+        <h3>League of Legends</h3>
+      </a>
+      <a href="/listings/pubg.html" class="game-card">
+        <img src="https://img.icons8.com/color/96/pubg.png" alt="PUBG" />
+        <h3>PUBG</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="authModal" class="auth-modal">
+    <div class="auth-box">
+      <h2>Login / Sign Up</h2>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Continue</button>
+    </div>
+  </div>
+
+  <button onclick="document.getElementById('authModal').style.display='block'" class="login-button">👤</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #f5f5f5;
+}
+header {
+  position: sticky;
+  top: 0;
+  background: #121212;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffd700;
+}
+nav a {
+  color: #ddd;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #00ffe0;
+}
+.hero {
+  background: url('https://images.unsplash.com/photo-1607013251231-7b7f9033f55b') no-repeat center/cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero h1, .hero p {
+  z-index: 2;
+}
+.search-bar {
+  margin: 40px auto;
+  max-width: 600px;
+  background-color: #1a1a1a;
+  border: 1px solid #ffa500;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  position: relative;
+}
+.search-bar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+.browse-button {
+  border-left: 1px solid #333;
+  color: #ffa500;
+  padding-left: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #1e1e1e;
+  border: 1px solid #ffa500;
+  border-top: none;
+  width: 250px;
+  display: none;
+  z-index: 1000;
+}
+.dropdown a {
+  display: block;
+  padding: 10px;
+  color: #ffd700;
+  text-decoration: none;
+}
+.dropdown a:hover {
+  background: #2c2c2c;
+}
+.grid-section {
+  padding: 60px 20px;
+}
+.grid-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #ffd700;
+}
+.category-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.category-bar button {
+  background: #333;
+  color: #ffd700;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.category-bar button:hover {
+  background: #444;
+}
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.game-card {
+  background: #1f1f1f;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.game-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #00ffe0;
+}
+.game-card img {
+  max-width: 100px;
+  border-radius: 8px;
+}
+.auth-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+.auth-box {
+  max-width: 400px;
+  margin: 100px auto;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+}
+.auth-box input,
+.auth-box button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.auth-box button {
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+}
+.login-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00ffe0;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  box-shadow: 0 0 10px #00ffe0;
+  cursor: pointer;
+}
