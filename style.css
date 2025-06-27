@@ -183,4 +183,95 @@ nav a:hover {
   font-size: 20px;
   box-shadow: 0 0 10px #00ffe0;
   cursor: pointer;
+}/* 🔥 Featured Items */
+.featured-section {
+  padding: 60px 20px;
+  background: #111;
 }
+.featured-section h2 {
+  text-align: center;
+  color: #ffa500;
+  margin-bottom: 30px;
+}
+.featured-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.featured-card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  text-align: center;
+  transition: 0.3s;
+}
+.featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #00ffe0;
+}
+.featured-card img {
+  max-width: 80px;
+}
+.featured-card h3 {
+  margin: 10px 0;
+  color: #ffd700;
+}
+.featured-card p {
+  color: #00ffe0;
+  font-weight: bold;
+}
+
+/* 🛡 Verified Sellers */
+.verified-section {
+  padding: 60px 20px;
+  background: #1a1a1a;
+}
+.verified-section h2 {
+  text-align: center;
+  color: #00ffe0;
+  margin-bottom: 30px;
+}
+.verified-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.verified-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #00ffe0;
+}
+.verified-card img {
+  max-width: 60px;
+}
+.verified-card h4 {
+  margin: 10px 0 5px;
+  color: #ffd700;
+}
+.verified-card span {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* 🎮 View All Games Button */
+.view-games-button {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 10px #ffd700;
+}
+.view-games-button:hover {
+  background: #ff9900;
+}
+
