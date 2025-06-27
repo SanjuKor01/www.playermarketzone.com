@@ -288,4 +288,57 @@ nav a:hover {
 .theme-toggle:hover {
   color: #00ffe0;
 }
+/* 🌗 Light Mode Styles */
+body.light-mode {
+  background: #f5f5f5;
+  color: #111;
+}
+body.light-mode header {
+  background: #fff;
+}
+body.light-mode .logo {
+  color: #222;
+}
+body.light-mode nav a {
+  color: #333;
+}
+body.light-mode nav a:hover {
+  color: #0077cc;
+}
+body.light-mode .search-bar {
+  background: #fff;
+  border: 1px solid #0077cc;
+}
+body.light-mode .browse-button {
+  color: #0077cc;
+}
+body.light-mode .dropdown {
+  background: #fff;
+  border: 1px solid #0077cc;
+}
+body.light-mode .dropdown a {
+  color: #0077cc;
+}
+body.light-mode .game-card,
+body.light-mode .featured-card,
+body.light-mode .verified-card,
+body.light-mode .game-box {
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+body.light-mode .game-card:hover,
+body.light-mode .featured-card:hover,
+body.light-mode .verified-card:hover,
+body.light-mode .game-box:hover {
+  box-shadow: 0 0 10px #0077cc;
+}
+body.light-mode .view-games-button {
+  background: #0077cc;
+  color: #fff;
+  box-shadow: 0 0 10px #0077cc;
+}
+body.light-mode .view-games-button:hover {
+  background: #0055aa;
+}
 
