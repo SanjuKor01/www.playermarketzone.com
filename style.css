@@ -275,4 +275,17 @@ nav a:hover {
 .view-games-button:hover {
   background: #ff9900;
 }
+/* 🌗 Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ffd700;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+.theme-toggle:hover {
+  color: #00ffe0;
+}
 
