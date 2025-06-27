@@ -341,4 +341,68 @@ body.light-mode .view-games-button {
 body.light-mode .view-games-button:hover {
   background: #0055aa;
 }
+/* 🔸 Base Styles */
+body {
+  background: #111;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffd700;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* 🔸 Grid for Game Cards */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+/* 🔸 Individual Game Box */
+.game-box {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.game-box:hover {
+  box-shadow: 0 0 10px #00ffe0;
+  transform: translateY(-4px);
+}
+
+.game-box h3 {
+  color: #00ffe0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* 🔸 Category Links */
+.categories a {
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #333;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.categories a:hover {
+  background: #00ffe0;
+  color: #000;
+}
 
