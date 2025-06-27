@@ -275,4 +275,43 @@ nav a:hover {
 .view-games-button:hover {
   background: #ff9900;
 }
+/* 🔥 Featured Items */
+.featured-section {
+  padding: 60px 20px;
+  background: #111;
+}
+.featured-section h2 {
+  text-align: center;
+  color: #ffa500;
+  margin-bottom: 30px;
+}
+.featured-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.featured-card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  text-align: center;
+  transition: 0.3s;
+}
+.featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #00ffe0;
+}
+.featured-card img {
+  max-width: 80px;
+}
+.featured-card h3 {
+  margin: 10px 0;
+  color: #ffd700;
+}
+.featured-card p {
+  color: #00ffe0;
+  font-weight: bold;
+}
 
