@@ -183,7 +183,8 @@ nav a:hover {
   font-size: 20px;
   box-shadow: 0 0 10px #00ffe0;
   cursor: pointer;
-}/* 🔥 Featured Items */
+}
+/* 🔥 Featured Items */
 .featured-section {
   padding: 60px 20px;
   background: #111;
