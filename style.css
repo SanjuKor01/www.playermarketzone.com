@@ -318,3 +318,67 @@ h1 {
   background: #00ffe0;
   color: #000;
 }
+/* Login Page */
+.login-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff;
+  text-align: center;
+}
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #0ff;
+}
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #000;
+  color: #0ff;
+  border: 1px solid #0ff;
+  border-radius: 6px;
+}
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background: #0ff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 8px #0ff;
+}
+
+/* Dashboard Menu */
+.dashboard {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #121212;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0ff;
+}
+.dashboard h2 {
+  color: #0ff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.dashboard-menu {
+  list-style: none;
+  padding: 0;
+}
+.dashboard-menu li {
+  padding: 12px 20px;
+  border-bottom: 1px solid #333;
+  color: #fff;
+  cursor: pointer;
+}
+.dashboard-menu li:hover {
+  background: #0ff2;
+  color: #000;
+}
+
