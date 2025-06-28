@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sell Orders - PlayerMarketZone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard-layout">
+    <div class="sidebar">
+      <h3>👤 User Panel</h3>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="orders-buy.html">Orders - Buy (0)</a></li>
+        <li><a href="messages.html">Messages (0)</a></li>
+        <li><a href="account-settings.html">Account Settings</a></li>
+        <li>My Balance: $0.00</li>
+        <li style="background:#0ff2; color:#000;">Orders - Sell (0)</li>
+        <li><a href="active-offers.html">Active Offers</a></li>
+        <li><a href="create-offer.html">Create Offer</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </div>
+
+    <div class="dashboard-content">
+      <h2>📦 Your Sell Orders</h2>
+      <p>You haven't sold anything yet. Once you receive a sale, it will appear below.</p>
+
+      <!-- Empty Table Example -->
+      <table style="width:100%; margin-top:20px; border-collapse:collapse;">
+        <thead style="background:#0ff2; color:#000;">
+          <tr>
+            <th style="padding:10px; border:1px solid #0ff;">Order ID</th>
+            <th style="padding:10px; border:1px solid #0ff;">Item Sold</th>
+            <th style="padding:10px; border:1px solid #0ff;">Buyer</th>
+            <th style="padding:10px; border:1px solid #0ff;">Price</th>
+            <th style="padding:10px; border:1px solid #0ff;">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="5" style="padding:20px; text-align:center; border:1px solid #0ff; color:#aaa;">No sell orders found</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
