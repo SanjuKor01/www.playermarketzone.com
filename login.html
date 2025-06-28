@@ -1,0 +1,40 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - PlayerMarketZone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>👤 Login to PlayerMarketZone</h2>
+    <input type="email" placeholder="Email" />
+    <input type="password" placeholder="Password" />
+    <button onclick="showDashboard()">Login</button>
+  </div>
+
+  <div class="dashboard" id="dashboard" style="display:none;">
+    <h2>🎮 Welcome to Your Dashboard</h2>
+    <ul class="dashboard-menu">
+      <li>📋 Dashboard</li>
+      <li>🛒 Orders - Buy (0)</li>
+      <li>💬 Messages (0)</li>
+      <li>⚙️ Account Settings</li>
+      <li>💰 My Balance: $0.00</li>
+      <li>📦 Orders - Sell (0)</li>
+      <li>🎯 Active Offers</li>
+      <li>➕ Create Offer</li>
+      <li style="color:red; cursor:pointer;">🚪 Logout</li>
+    </ul>
+  </div>
+
+  <script>
+    function showDashboard() {
+      document.querySelector('.login-container').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
