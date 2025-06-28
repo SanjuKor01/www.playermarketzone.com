@@ -1,4 +1,3 @@
-<!-- login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,34 +5,170 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - PlayerMarketZone</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    .login-page {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-box {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #0ff;
+      width: 300px;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      color: #0ff;
+      margin-bottom: 20px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      background: #000;
+      color: #0ff;
+      border: 1px solid #0ff;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background: #0ff;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .dashboard-layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 240px;
+      background: #111;
+      padding: 30px 15px;
+      box-shadow: 2px 0 10px #0ff3;
+    }
+
+    .sidebar h3 {
+      color: #0ff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      padding: 12px 20px;
+      margin-bottom: 10px;
+      background: #1e1e1e;
+      border-left: 4px solid transparent;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .sidebar ul li:hover {
+      background: #0ff2;
+      border-left: 4px solid #0ff;
+      color: #000;
+    }
+
+    .dashboard-content {
+      flex: 1;
+      padding: 40px;
+      background: #1a1a1a;
+    }
+
+    .dashboard-content h2 {
+      color: #0ff;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-  <div class="login-container">
-    <h2>👤 Login to PlayerMarketZone</h2>
-    <input type="email" placeholder="Email" />
-    <input type="password" placeholder="Password" />
-    <button onclick="showDashboard()">Login</button>
+
+  <!-- Login Box -->
+  <div class="login-page" id="loginPage">
+    <div class="login-box">
+      <h2>👤 Login</h2>
+      <input type="email" placeholder="Email" id="email" />
+      <input type="password" placeholder="Password" id="password" />
+      <button onclick="login()">Login</button>
+    </div>
   </div>
 
-  <div class="dashboard" id="dashboard" style="display:none;">
-    <h2>🎮 Welcome to Your Dashboard</h2>
-    <ul class="dashboard-menu">
-      <li>📋 Dashboard</li>
-      <li>🛒 Orders - Buy (0)</li>
-      <li>💬 Messages (0)</li>
-      <li>⚙️ Account Settings</li>
-      <li>💰 My Balance: $0.00</li>
-      <li>📦 Orders - Sell (0)</li>
-      <li>🎯 Active Offers</li>
-      <li>➕ Create Offer</li>
-      <li style="color:red; cursor:pointer;">🚪 Logout</li>
-    </ul>
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout" id="dashboard" style="display: none;">
+    <div class="sidebar">
+      <h3>🎮 My Menu</h3>
+      <ul>
+        <li>📋 Dashboard</li>
+        <li>🛒 Orders - Buy (0)</li>
+        <li>💬 Messages (0)</li>
+        <li>⚙️ Account Settings</li>
+        <li>💰 My Balance: $0.00</li>
+        <li>📦 Orders - Sell (0)</li>
+        <li>🎯 Active Offers</li>
+        <li>➕ Create Offer</li>
+        <li onclick="logout()" style="color:red;">🚪 Logout</li>
+      </ul>
+    </div>
+    <div class="dashboard-content">
+      <h2>Welcome, <span id="userEmail"></span>!</h2>
+      <p>This is your dashboard. All your activity will be shown here.</p>
+    </div>
   </div>
 
   <script>
-    function showDashboard() {
-      document.querySelector('.login-container').style.display = 'none';
-      document.getElementById('dashboard').style.display = 'block';
+    // Load dashboard if already logged in
+    window.onload = () => {
+      if (localStorage.getItem("loggedIn") === "true") {
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("dashboard").style.display = "flex";
+        document.getElementById("userEmail").textContent = localStorage.getItem("userEmail");
+      }
+    };
+
+    function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (email && password) {
+        localStorage.setItem("loggedIn", "true");
+        localStorage.setItem("userEmail", email);
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("dashboard").style.display = "flex";
+        document.getElementById("userEmail").textContent = email;
+      } else {
+        alert("Please enter email and password");
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      localStorage.removeItem("userEmail");
+      location.reload();
     }
   </script>
 </body>
