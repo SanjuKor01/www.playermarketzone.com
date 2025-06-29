@@ -725,21 +725,20 @@ body {
     width: 100%;
     box-shadow: none;
   }
-.offer-form {
-  max-width: 600px;
-  margin: 40px auto;
-  background: #111;
-  padding: 30px;
-  border: 1px solid #0ff;
+  .offer-form {
+  background: #121212;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 20px #0ff4;
+  box-shadow: 0 0 10px #0ff3;
+  max-width: 600px;
+  margin: auto;
 }
 
 .offer-form label {
   display: block;
   margin-top: 15px;
-  margin-bottom: 5px;
   color: #0ff;
+  font-weight: bold;
 }
 
 .offer-form input,
@@ -747,24 +746,20 @@ body {
 .offer-form textarea,
 .offer-form button {
   width: 100%;
-  padding: 12px;
-  background: #000;
-  border: 1px solid #0ff4;
+  margin-top: 8px;
+  padding: 10px;
+  background: #1c1c1c;
+  border: 1px solid #0ff3;
   color: #0ff;
   border-radius: 6px;
-  margin-bottom: 15px;
-  font-size: 14px;
 }
 
 .offer-form button {
-  background: #0ff;
+  background-color: #0ff;
   color: #000;
   font-weight: bold;
+  margin-top: 20px;
   cursor: pointer;
-}
-
-.offer-form button:hover {
-  background: #00e6e6;
 }
 
 
