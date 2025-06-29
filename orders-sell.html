@@ -2,49 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sell Orders - PlayerMarketZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orders - Sell | PlayerMarketZone</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    .dashboard-layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 240px;
+      background: #111;
+      padding: 30px 15px;
+      box-shadow: 2px 0 10px #0ff3;
+    }
+
+    .sidebar h3 {
+      color: #0ff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      padding: 12px 20px;
+      margin-bottom: 10px;
+      background: #1e1e1e;
+      border-left: 4px solid transparent;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .sidebar ul li:hover {
+      background: #0ff2;
+      border-left: 4px solid #0ff;
+      color: #000;
+    }
+
+    .dashboard-content {
+      flex: 1;
+      padding: 40px;
+      background: #1a1a1a;
+    }
+
+    .dashboard-content h2 {
+      color: #0ff;
+      margin-bottom: 20px;
+    }
+
+    .order-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #111;
+      box-shadow: 0 0 10px #0ff2;
+    }
+
+    .order-table th,
+    .order-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+
+    .order-table th {
+      background: #0ff2;
+      color: #000;
+    }
+
+    .order-table tr:hover {
+      background-color: #222;
+    }
+  </style>
 </head>
 <body>
-  <div class="dashboard-layout">
-    <div class="sidebar">
-      <h3>👤 User Panel</h3>
-      <ul>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="orders-buy.html">Orders - Buy (0)</a></li>
-        <li><a href="messages.html">Messages (0)</a></li>
-        <li><a href="account-settings.html">Account Settings</a></li>
-        <li>My Balance: $0.00</li>
-        <li style="background:#0ff2; color:#000;">Orders - Sell (0)</li>
-        <li><a href="active-offers.html">Active Offers</a></li>
-        <li><a href="create-offer.html">Create Offer</a></li>
-        <li><a href="login.html">Logout</a></li>
-      </ul>
-    </div>
 
-    <div class="dashboard-content">
-      <h2>📦 Your Sell Orders</h2>
-      <p>You haven't sold anything yet. Once you receive a sale, it will appear below.</p>
-
-      <!-- Empty Table Example -->
-      <table style="width:100%; margin-top:20px; border-collapse:collapse;">
-        <thead style="background:#0ff2; color:#000;">
-          <tr>
-            <th style="padding:10px; border:1px solid #0ff;">Order ID</th>
-            <th style="padding:10px; border:1px solid #0ff;">Item Sold</th>
-            <th style="padding:10px; border:1px solid #0ff;">Buyer</th>
-            <th style="padding:10px; border:1px solid #0ff;">Price</th>
-            <th style="padding:10px; border:1px solid #0ff;">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="5" style="padding:20px; text-align:center; border:1px solid #0ff; color:#aaa;">No sell orders found</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="dashboard-layout">
+  <div class="sidebar">
+    <h3>🎮 My Menu</h3>
+    <ul>
+      <li onclick="window.location.href='dashboard.html'">📋 Dashboard</li>
+      <li onclick="window.location.href='orders-buy.html'">🛒 Orders - Buy (0)</li>
+      <li onclick="window.location.href='messages.html'">💬 Messages (0)</li>
+      <li onclick="window.location.href='account-settings.html'">⚙️ Account Settings</li>
+      <li>💰 My Balance: $0.00</li>
+      <li style="background:#0ff2;color:#000;border-left:4px solid #0ff;">📦 Orders - Sell (0)</li>
+      <li onclick="window.location.href='active-offers.html'">🎯 Active Offers</li>
+      <li onclick="window.location.href='create-offer.html'">➕ Create Offer</li>
+      <li onclick="logout()" style="color:red;">🚪 Logout</li>
+    </ul>
   </div>
+  <div class="dashboard-content">
+    <h2>📦 Orders - Sell</h2>
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Item</th>
+          <th>Buyer</th>
+          <th>Status</th>
+          <th>Earnings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#ORD0123</td>
+          <td>Valorant Account</td>
+          <td>gamer123</td>
+          <td>Delivered</td>
+          <td>₹1499</td>
+        </tr>
+        <tr>
+          <td>#ORD0124</td>
+          <td>PUBG UC 1800</td>
+          <td>pubgMaster</td>
+          <td>Pending</td>
+          <td>₹449</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("userEmail");
+    window.location.href = "login.html";
+  }
+</script>
+
 </body>
 </html>
