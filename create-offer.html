@@ -7,25 +7,32 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">🎮 PlayerMarket</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="#">Support</a>
-      <a href="#">Cart 🛒</a>
-    </nav>
-  </header>
 
-  <section class="dashboard-content">
-    <h2>➕ Create a New Offer</h2>
+<div class="dashboard-layout">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>🎮 My Menu</h3>
+    <ul>
+      <li><a href="dashboard.html">📋 Dashboard</a></li>
+      <li>🛒 Orders - Buy (0)</li>
+      <li>💬 Messages (0)</li>
+      <li>⚙️ Account Settings</li>
+      <li>💰 My Balance: $0.00</li>
+      <li>📦 Orders - Sell (0)</li>
+      <li><strong style="color: #0ff;">🎯 Create Offer</strong></li>
+      <li>🚪 Logout</li>
+    </ul>
+  </div>
+
+  <!-- Content -->
+  <div class="dashboard-content">
+    <h2>Create New Offer</h2>
     <form class="offer-form">
       <label>Game Title:</label>
-      <input type="text" placeholder="e.g. PUBG Mobile" required />
+      <input type="text" placeholder="e.g. PUBG, Valorant" required />
 
-      <label>Category:</label>
-      <select required>
-        <option value="">Select</option>
+      <label>Item Type:</label>
+      <select>
         <option>Currency</option>
         <option>Items / Skins</option>
         <option>Accounts</option>
@@ -33,19 +40,21 @@
       </select>
 
       <label>Offer Title:</label>
-      <input type="text" placeholder="Short title for your offer" required />
+      <input type="text" placeholder="e.g. 5000 UC PUBG Global" required />
 
-      <label>Description:</label>
-      <textarea placeholder="Write full details of your offer" required></textarea>
+      <label>Price (INR):</label>
+      <input type="number" placeholder="₹499" required />
 
-      <label>Price (₹):</label>
-      <input type="number" placeholder="e.g. 999" required />
-
-      <label>Upload Image (optional):</label>
+      <label>Upload Image:</label>
       <input type="file" />
 
-      <button type="submit">🚀 Post Offer</button>
+      <label>Description:</label>
+      <textarea rows="4" placeholder="Enter detailed offer description..."></textarea>
+
+      <button type="submit">Create Offer</button>
     </form>
-  </section>
+  </div>
+</div>
+
 </body>
 </html>
