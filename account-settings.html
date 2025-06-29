@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account Settings - PlayerMarketZone</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .settings-form {
+      background: #111;
+      border: 1px solid #0ff3;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 600px;
+    }
+    .settings-form h3 {
+      color: #0ff;
+      margin-bottom: 20px;
+    }
+    .settings-form label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #ccc;
+    }
+    .settings-form input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      background: #000;
+      border: 1px solid #0ff;
+      border-radius: 6px;
+      color: #0ff;
+    }
+    .settings-form button {
+      padding: 12px 20px;
+      background: #0ff;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-layout">
+    <div class="sidebar">
+      <h3>🎮 My Menu</h3>
+      <ul>
+        <li><a href="dashboard.html">📋 Dashboard</a></li>
+        <li><a href="orders-buy.html">🛒 Orders - Buy (0)</a></li>
+        <li><a href="messages.html">💬 Messages (0)</a></li>
+        <li class="active"><a href="account-settings.html">⚙️ Account Settings</a></li>
+        <li><a href="#">💰 My Balance: $0.00</a></li>
+        <li><a href="orders-sell.html">📦 Orders - Sell (0)</a></li>
+        <li><a href="active-offers.html">🎯 Active Offers</a></li>
+        <li><a href="create-offer.html">➕ Create Offer</a></li>
+        <li onclick="logout()" style="color:red;cursor:pointer;">🚪 Logout</li>
+      </ul>
+    </div>
+
+    <div class="dashboard-content">
+      <h2>⚙️ Account Settings</h2>
+      <div class="settings-form">
+        <h3>Update Your Info</h3>
+        <label>Email Address</label>
+        <input type="email" value="user@example.com" />
+
+        <label>Username</label>
+        <input type="text" value="PlayerOne" />
+
+        <label>Password</label>
+        <input type="password" value="password123" />
+
+        <button>Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      localStorage.removeItem("userEmail");
+      location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
