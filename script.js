@@ -17,3 +17,11 @@ document.addEventListener('click', function(event) {
     toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
   });
 </script>
+<script>
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("userEmail");
+    window.location.href = "login.html";
+  }
+</script>
+
