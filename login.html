@@ -8,17 +8,18 @@
 </head>
 <body>
 
-  <!-- Login Box -->
-  <div class="login-page" id="loginPage">
-    <div class="login-box">
-      <h2>👤 Login</h2>
+  <!-- 🔐 Login + Signup Box -->
+  <div class="auth-container" id="authContainer">
+    <div class="auth-box">
+      <h2 id="formTitle">👤 Login</h2>
       <input type="email" placeholder="Email" id="email" />
       <input type="password" placeholder="Password" id="password" />
       <button onclick="login()">Login</button>
+      <p id="toggleText">Don't have an account? <a href="#" onclick="toggleForm()">Sign up</a></p>
     </div>
   </div>
 
-  <!-- Dashboard Layout -->
+  <!-- 🧾 Dashboard Layout -->
   <div class="dashboard-layout" id="dashboard" style="display: none;">
     <div class="sidebar">
       <h3>🎮 My Menu</h3>
@@ -41,9 +42,10 @@
   </div>
 
   <script>
+    // Auto login on refresh
     window.onload = () => {
       if (localStorage.getItem("loggedIn") === "true") {
-        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("authContainer").style.display = "none";
         document.getElementById("dashboard").style.display = "flex";
         document.getElementById("userEmail").textContent = localStorage.getItem("userEmail");
       }
@@ -56,11 +58,11 @@
       if (email && password) {
         localStorage.setItem("loggedIn", "true");
         localStorage.setItem("userEmail", email);
-        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("authContainer").style.display = "none";
         document.getElementById("dashboard").style.display = "flex";
         document.getElementById("userEmail").textContent = email;
       } else {
-        alert("Please enter email and password");
+        alert("Please enter both email and password");
       }
     }
 
@@ -68,6 +70,22 @@
       localStorage.removeItem("loggedIn");
       localStorage.removeItem("userEmail");
       location.reload();
+    }
+
+    function toggleForm() {
+      const title = document.getElementById("formTitle");
+      const toggleText = document.getElementById("toggleText");
+      const btn = document.querySelector(".auth-box button");
+
+      if (title.innerText === "👤 Login") {
+        title.innerText = "📝 Sign Up";
+        btn.innerText = "Sign Up";
+        toggleText.innerHTML = 'Already have an account? <a href="#" onclick="toggleForm()">Login</a>';
+      } else {
+        title.innerText = "👤 Login";
+        btn.innerText = "Login";
+        toggleText.innerHTML = 'Don\'t have an account? <a href="#" onclick="toggleForm()">Sign up</a>';
+      }
     }
   </script>
 </body>
