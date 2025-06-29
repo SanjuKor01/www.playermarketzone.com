@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Offer - PlayerMarketZone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🎮 PlayerMarket</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="#">Support</a>
+      <a href="#">Cart 🛒</a>
+    </nav>
+  </header>
+
+  <section class="dashboard-content">
+    <h2>➕ Create a New Offer</h2>
+    <form class="offer-form">
+      <label>Game Title:</label>
+      <input type="text" placeholder="e.g. PUBG Mobile" required />
+
+      <label>Category:</label>
+      <select required>
+        <option value="">Select</option>
+        <option>Currency</option>
+        <option>Items / Skins</option>
+        <option>Accounts</option>
+        <option>Power Leveling</option>
+      </select>
+
+      <label>Offer Title:</label>
+      <input type="text" placeholder="Short title for your offer" required />
+
+      <label>Description:</label>
+      <textarea placeholder="Write full details of your offer" required></textarea>
+
+      <label>Price (₹):</label>
+      <input type="number" placeholder="e.g. 999" required />
+
+      <label>Upload Image (optional):</label>
+      <input type="file" />
+
+      <button type="submit">🚀 Post Offer</button>
+    </form>
+  </section>
+</body>
+</html>
