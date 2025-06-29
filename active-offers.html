@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Active Offers | PlayerMarketZone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard-layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3>🎮 My Menu</h3>
+      <ul>
+        <li><a href="dashboard.html">📋 Dashboard</a></li>
+        <li><a href="orders-buy.html">🛒 Orders - Buy</a></li>
+        <li><a href="orders-sell.html">📦 Orders - Sell</a></li>
+        <li><a href="messages.html">💬 Messages</a></li>
+        <li><a href="account-settings.html">⚙️ Account Settings</a></li>
+        <li><a href="my-balance.html">💰 My Balance</a></li>
+        <li class="active">🎯 Active Offers</li>
+        <li><a href="create-offer.html">➕ Create Offer</a></li>
+        <li style="color:red;" onclick="logout()">🚪 Logout</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="dashboard-content">
+      <h2>🎯 Your Active Offers</h2>
+
+      <table class="offers-table">
+        <thead>
+          <tr>
+            <th>Offer Title</th>
+            <th>Game</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Valorant Reaver Skin</td>
+            <td>Valorant</td>
+            <td>Items / Skins</td>
+            <td>₹799</td>
+            <td class="status-live">🟢 Live</td>
+            <td><button class="edit-btn">✏️ Edit</button> <button class="delete-btn">❌ Remove</button></td>
+          </tr>
+          <tr>
+            <td>PUBG UC 1800</td>
+            <td>PUBG</td>
+            <td>Currency</td>
+            <td>₹449</td>
+            <td class="status-live">🟢 Live</td>
+            <td><button class="edit-btn">✏️ Edit</button> <button class="delete-btn">❌ Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      localStorage.removeItem("userEmail");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
