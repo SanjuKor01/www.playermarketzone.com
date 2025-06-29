@@ -941,5 +941,25 @@ body {
   background-color: #e53935;
   color: #fff;
 }
+.sidebar a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-left: 4px solid transparent;
+  transition: 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #252525;
+  border-left: 4px solid #00ffe0;
+  color: #00ffe0;
+}
+
+.sidebar a.active {
+  background-color: #252525;
+  border-left: 4px solid #00ffe0;
+  color: #00ffe0;
+}
 
 
