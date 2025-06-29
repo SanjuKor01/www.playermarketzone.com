@@ -600,4 +600,130 @@ body {
   color: #0ff;
   margin-bottom: 20px;
 }
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+/* Auth Box (Login/Signup) */
+.auth-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+}
+.auth-box {
+  background: #121212;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00fff7;
+  width: 320px;
+  text-align: center;
+}
+.auth-box h2 {
+  color: #00fff7;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #00fff7;
+}
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #00fff7;
+  background: #000;
+  color: #00fff7;
+}
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: #00fff7;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.auth-box button:hover {
+  background: #00e5f0;
+}
+.auth-box p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.auth-box a {
+  color: #00fff7;
+  text-decoration: underline;
+}
+
+/* Dashboard Layout */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #111;
+  padding: 30px 15px;
+  box-shadow: 2px 0 10px #00fff733;
+}
+.sidebar h3 {
+  color: #00fff7;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li {
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  background: #1e1e1e;
+  border-left: 4px solid transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: #fff;
+}
+.sidebar ul li:hover {
+  background: #00fff7;
+  border-left: 4px solid #00fff7;
+  color: #000;
+}
+
+/* Dashboard Main */
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  background: #1a1a1a;
+}
+.dashboard-content h2 {
+  color: #00fff7;
+  margin-bottom: 10px;
+}
+.dashboard-content p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    box-shadow: none;
+  }
+}
 
