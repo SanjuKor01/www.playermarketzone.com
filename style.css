@@ -502,4 +502,102 @@ nav a:hover {
   color: #0ff;
   margin-bottom: 20px;
 }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.login-page {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #0ff;
+  width: 300px;
+}
+
+.login-box h2 {
+  text-align: center;
+  color: #0ff;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background: #000;
+  color: #0ff;
+  border: 1px solid #0ff;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #0ff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: #111;
+  padding: 30px 15px;
+  box-shadow: 2px 0 10px #0ff3;
+}
+
+.sidebar h3 {
+  color: #0ff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  background: #1e1e1e;
+  border-left: 4px solid transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background: #0ff2;
+  border-left: 4px solid #0ff;
+  color: #000;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  background: #1a1a1a;
+}
+
+.dashboard-content h2 {
+  color: #0ff;
+  margin-bottom: 20px;
+}
 
