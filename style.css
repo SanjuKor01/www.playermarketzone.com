@@ -725,5 +725,46 @@ body {
     width: 100%;
     box-shadow: none;
   }
+.offer-form {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #111;
+  padding: 30px;
+  border: 1px solid #0ff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #0ff4;
 }
+
+.offer-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #0ff;
+}
+
+.offer-form input,
+.offer-form select,
+.offer-form textarea,
+.offer-form button {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  border: 1px solid #0ff4;
+  color: #0ff;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.offer-form button {
+  background: #0ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.offer-form button:hover {
+  background: #00e6e6;
+}
+
 
