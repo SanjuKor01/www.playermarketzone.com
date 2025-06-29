@@ -761,5 +761,67 @@ body {
   margin-top: 20px;
   cursor: pointer;
 }
+.chat-container {
+  background: #111;
+  border: 1px solid #0ff3;
+  border-radius: 10px;
+  padding: 20px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.chat-message {
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+  max-width: 75%;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.buyer {
+  background: #0ff3;
+  color: #000;
+  align-self: flex-start;
+}
+
+.seller {
+  background: #333;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  background: #000;
+  border: 1px solid #0ff;
+  border-radius: 6px;
+  color: #0ff;
+}
+
+.chat-input button {
+  padding: 12px 18px;
+  background: #0ff;
+  border: none;
+  color: #000;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 
