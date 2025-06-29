@@ -844,5 +844,59 @@ body {
   margin: 4px 0;
   color: #ccc;
 }
+.wallet-box {
+  background: #1e1e1e;
+  border: 1px solid #0ff2;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px #0ff4;
+}
+
+.wallet-box h3 {
+  font-size: 1.5rem;
+  color: #0ff;
+}
+
+.highlight {
+  color: #00ffcc;
+}
+
+.withdraw-btn {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #0ff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.transaction-table th, .transaction-table td {
+  padding: 12px;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+.transaction-table th {
+  background: #222;
+  color: #0ff;
+}
+
+.status-complete {
+  color: lime;
+}
+
+.status-pending {
+  color: orange;
+}
 
 
