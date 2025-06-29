@@ -823,5 +823,26 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+.order-box {
+  background: #1e1e1e;
+  border: 1px solid #0ff3;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px #0ff2;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #0ff;
+  margin-bottom: 10px;
+}
+
+.order-details p {
+  margin: 4px 0;
+  color: #ccc;
+}
 
 
